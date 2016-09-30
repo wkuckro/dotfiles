@@ -27,6 +27,7 @@ brew install bfg
 brew install binutils
 brew install binwalk
 brew install cifer
+brew install cloc
 brew install dex2jar
 brew install dns2tcp
 brew install fcrackzip
