@@ -22,6 +22,7 @@ brew install homebrew/dupes/screen
 brew install homebrew/php/php56 --with-gmp
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
+brew cask install Java
 brew install aircrack-ng
 brew install bfg
 brew install binutils
@@ -42,10 +43,8 @@ brew install pngcheck
 brew install socat
 brew install sqlmap
 brew install tcpflow
-brew install tcpreplay
 brew install tcptrace
 brew install ucspi-tcp
-brew install xpdf
 brew install xz
 
 # Install other useful binaries.
