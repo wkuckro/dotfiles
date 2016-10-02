@@ -91,6 +91,9 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 echo "Use column view in all Finder windows by default"
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
+#echo "Order by Kind"
+#/usr/libexec/PlistBuddy -c "Set :StandardViewOptions:ColumnViewOptions:ArrangeBy dnam" ~/Library/Preferences/com.apple.finder.plist
+
 ##########################
 ## Safari Settings
 ##########################
