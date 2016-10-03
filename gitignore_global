@@ -2,15 +2,44 @@ syntax: glob
 
 # Compiled Python files
 *.pyc
-
-# Folder view configuration files
+*.pyo
+#####################
+# OS generated files
+#####################
 .DS_Store
-Desktop.ini
-
-# Thumbnail cache files
+.DS_Store?
 ._*
-Thumbs.db
-
-# Files that might appear on external disks
 .Spotlight-V100
 .Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+#####################
+# Compiled source #
+#####################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+#####################
+# Logs and databases
+#####################
+*.log
+*.sql
+*.sqlite
+
+#####################
+# Packages
+#####################
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
