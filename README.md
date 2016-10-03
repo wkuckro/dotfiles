@@ -36,3 +36,12 @@ chmod +x osx.sh
 ./brew.sh
 ```
 ## Use
+
+
+## Acknowledgements
+I would not have been able to do this without so great starters.
+https://github.com/cowboy/dotfiles
+https://github.com/michaeljsmalley/dotfiles
+https://github.com/mathiasbynens/dotfiles
+https://github.com/webpro/dotfiles/
+https://github.com/nicknisi/dotfiles
