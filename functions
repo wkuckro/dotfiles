@@ -1,0 +1,10 @@
+# Collection of functions for use in shells
+
+##################
+# Navigating
+##################
+
+# Create a new directory and enter it
+function mkd() {
+    mkdir -p "$@" && cd "$@"
+}
