@@ -19,10 +19,8 @@ brew install vim --override-system-vi
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
-brew install homebrew/php/php56 --with-gmp
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
-brew cask install Java
 brew install aircrack-ng
 brew install bfg
 brew install binutils
@@ -43,7 +41,6 @@ brew install pngcheck
 brew install socat
 brew install sqlmap
 brew install tcpflow
-brew install tcptrace
 brew install ucspi-tcp
 brew install xz
 
@@ -66,6 +63,8 @@ brew install tree
 brew install vbindiff
 brew install webkit2png
 
+# Check and see if it's a Mac, then install the cask and apps below
+if [ "$(uname)" == "Darwin" ]; then
 # Install Caskroom
 brew tap caskroom/cask
 
@@ -96,6 +95,7 @@ brew cask install torbrowser
 brew cask install transmit
 brew cask install virtualbox
 brew cask install vlc
+fi
 
 # Remove outdated versions from the cellar.
 brew cask cleanup

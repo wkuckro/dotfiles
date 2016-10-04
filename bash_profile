@@ -74,3 +74,10 @@ source ~/.profile
 if [ -f ~/.bashrc ]; then
    source ~/.bashrc
 fi
+
+# Check for Ubuntu, fix for it
+if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+export PATH="/home/alpha/.linuxbrew/bin:$PATH"
+export PATH="/home/alpha/.linuxbrew/sbin:$PATH"
+export XDG_DATA_DIRS="/home/alpha/.linuxbrew/share:$XDG_DATA_DIRS"
+fi
