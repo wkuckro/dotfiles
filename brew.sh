@@ -66,5 +66,37 @@ brew install tree
 brew install vbindiff
 brew install webkit2png
 
+# Install Caskroom
+brew tap caskroom/cask
+
+# Install Apps
+brew cask install airfoil
+brew cask install appcleaner
+brew cask install atom
+brew cask install audio-hijack
+brew cask install caffine
+brew cask install carbon-copy-cloner
+brew cask install daisydisk
+brew cask install dropbox
+brew cask install firefox
+brew cask install fission
+brew cask install google-chrome
+brew cask install google-drive
+brew cask install google-earth-pro
+brew cask install helium
+brew cask install icefloor
+brew cask install istat-menus
+brew cask install netspot
+brew cask install numi
+brew cask install parallels-desktop
+brew cask install postman
+brew cask install slack
+brew cask install teamviewer
+brew cask install torbrowser
+brew cask install transmit
+brew cask install virtualbox
+brew cask install vlc
+
 # Remove outdated versions from the cellar.
+brew cask cleanup
 brew cleanup
