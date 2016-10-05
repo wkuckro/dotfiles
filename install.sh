@@ -67,7 +67,7 @@ if [[ $? = 0 ]]; then
 
 
 #############################
-#Install Node Vand components
+#Install Node and components
 #############################
 
 # Install Node Version Manager
@@ -81,3 +81,11 @@ if (command -v nvm)  #https://github.com/creationix/nvm
 
 # Install Node after NVM complete
 nvm install node
+
+# Install homebrew/linuxbrew
+if [ "$(uname)" == "Darwin" ]; then
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
+PATH="$HOME/.linuxbrew/bin:$PATH"
+fi
