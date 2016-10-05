@@ -63,6 +63,7 @@ if [[ $? = 0 ]]; then
       exit 1
     fi
   fi
+fi
 
 
 
@@ -76,8 +77,8 @@ echo "=============================="
 
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | bash
 
-echo "Check if the installation was a sucess"
-if (command -v nvm)  #https://github.com/creationix/nvm
+#echo "Check if the installation was a sucess"
+#if (command -v nvm)  #https://github.com/creationix/nvm
 
 # Install Node after NVM complete
 nvm install node
