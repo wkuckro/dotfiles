@@ -1,5 +1,5 @@
 #source /Users/alpha/perl5/perlbrew/etc/bashrc
-source ~/.bash_profile
+#source ~/.bash_profile
 #source ~/.functitons
 
 export NVM_DIR="/Users/alpha/.nvm"
