@@ -70,11 +70,6 @@ alias check='npm outdated -g --depth=0'
 source ~/.profile
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-#Source .bashrc
-if [ -f ~/.bashrc ]; then
-   source ~/.bashrc
-fi
-
 # Check for Ubuntu, fix for it
 if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 export PATH="/home/alpha/.linuxbrew/bin:$PATH"
