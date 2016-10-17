@@ -59,7 +59,6 @@ alias binary='echo -e "1"; while $t; do for i in `seq 1 30`;do r="$[($RANDOM % 2
 #App helpers
 ###########################
 #NVM help
-source ~/.bashrc
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
@@ -67,7 +66,6 @@ export NVM_DIR="$HOME/.nvm"
 alias check='npm outdated -g --depth=0'
 
 #RVM help
-source ~/.profile
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Check for Ubuntu, fix for it
