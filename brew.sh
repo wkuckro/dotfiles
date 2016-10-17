@@ -4,11 +4,12 @@
 
 # Update Homebrew and any existing formulae
 brew update
-brew upgrade
+brew upgrade --all
 
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
+[ -e "/usr/local/bin/sha256sum" ] && rm -rf /usr/local/bin/sha256sum
 ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 
 # Install wget
