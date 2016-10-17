@@ -85,6 +85,7 @@ brew cask install google-earth-pro
 brew cask install helium
 brew cask install icefloor
 brew cask install istat-menus
+brew cask install iterm2
 brew cask install netspot
 brew cask install numi
 brew cask install parallels-desktop
