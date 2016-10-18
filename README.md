@@ -30,22 +30,24 @@ chmod +x brew.sh && ./brew.sh
 5. Run the macOS install file to update preferences on macOS
 
 ```bash
-chmod +x osx.sh
-./brew.sh
+chmod +x osx.sh && ./osx.sh
 ```
 ## Use
 
 
 ## Acknowledgements
 I would not have been able to do this without such great starters.
--https://github.com/cowboy/dotfiles
--https://github.com/michaeljsmalley/dotfiles
--https://github.com/mathiasbynens/dotfiles
--https://github.com/webpro/dotfiles/
--https://github.com/nicknisi/dotfiles
--https://github.com/atomantic/dotfiles/
--https://github.com/kevinSuttle/MacOS-Defaults
+* https://github.com/cowboy/dotfiles
+* https://github.com/michaeljsmalley/dotfiles
+* https://github.com/mathiasbynens/dotfiles
+* https://github.com/webpro/dotfiles/
+* https://github.com/nicknisi/dotfiles
+* https://github.com/atomantic/dotfiles/
+* https://github.com/kevinSuttle/MacOS-Defaults
 
 ## ToDo:
 
 * Automate install of XCode command line tools
+
+## License
+Licensed under the MIT.
