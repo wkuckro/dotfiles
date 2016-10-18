@@ -84,9 +84,9 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | b
 nvm install node
 
 # Install homebrew/linuxbrew
-if [ "$(uname)" == "Darwin" ]; then
+if [ "$(uname)" == "Darwin" ];then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+else [ "$(expr substr $(uname -s) 1 5)" == "Linux" ];then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
 PATH="$HOME/.linuxbrew/bin:$PATH"
 fi
