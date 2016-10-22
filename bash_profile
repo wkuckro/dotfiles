@@ -10,7 +10,8 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
 
 # Added by install_latest_perl_osx.pl
-[ -r /Users/alpha/.bashrc ] && source /Users/alpha/.bashrc
+####This is causing some weird bash login behavior
+#[ -r /Users/alpha/.bashrc ] && source /Users/alpha/.bashrc
 
 ###########################
 #App helpers
