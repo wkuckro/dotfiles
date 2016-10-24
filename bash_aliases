@@ -30,6 +30,7 @@ alias about='uname -amnprsv'                                # Define os name, ve
 alias freq='cut -f1 -d" " ~/.bash_history | sort | uniq -c | sort -nr | head -n 30'							# Show commands used frequently
 alias topc='top -o cpu'
 alias topm='top -o mem'
+alias check='npm outdated -g --depth=0'						#NPM help
 
 ###########################
 #Fun
