@@ -3,7 +3,20 @@
 ###########################
 #FILE AND FOLDER MANAGEMENT
 ###########################
-alias ls='ls -GFh'                                  # ls            Get the list of info, pretty lie
+### Get os name via uname ###
+_myos="$(uname)"
+ 
+### add alias as per os using $_myos ###
+case $_myos in
+   Darwin) 
+	alias ls='ls -GFh'
+	;;
+   Linux) 
+	alias ls='ls --color=auto' 
+	alias lsa='ls --color=auto -a'
+	;;
+   *) ;;
+esac
 alias df='df -H'                                    # df            Define files in human-readble
 alias du='du -ch'                                   # du            Define files in human-readble
 alias mount='mount |column -t'                      # mount:        Make mount Human-readable
@@ -11,16 +24,18 @@ alias mount='mount |column -t'                      # mount:        Make mount H
 ###########################
 #NETWORKING
 ###########################
-alias ip='curl ifconfig.me'		                      # ipconfig:     Show public-facing ip
-alias netCons='lsof -i'                             # netCons:      Show all open TCP/IP sockets
-alias flushDNS='dscacheutil -flushcache'            # flushDNS:     Flush out the DNS Cache
-alias lsock='sudo /usr/sbin/lsof -i -P'             # lsock:        Display open sockets
-alias lsockU='sudo /usr/sbin/lsof -nP | grep UDP'   # lsockU:       Display only open UDP sockets
-alias lsockT='sudo /usr/sbin/lsof -nP | grep TCP'   # lsockT:       Display only open TCP sockets
-alias ip0='ipconfig getpacket en0'                  # ip0:          Get info on connections for en0
-alias ip1='ipconfig getpacket en1'                  # ip1:          Get info on connections for en1
-alias openPorts='sudo lsof -i | grep LISTEN'        # openPorts:    All listening connections
+alias ip='curl ifconfig.me && curl ifconfig.me/host'	# ipconfig:     Show public-facing ip
+alias netCons='lsof -i'                             	# netCons:      Show all open TCP/IP sockets
+alias flushDNS='dscacheutil -flushcache'            	# flushDNS:     Flush out the DNS Cache
+alias lsock='sudo /usr/sbin/lsof -i -P'             	# lsock:        Display open sockets
+alias lsockU='sudo /usr/sbin/lsof -nP | grep UDP'   	# lsockU:       Display only open UDP sockets
+alias lsockT='sudo /usr/sbin/lsof -nP | grep TCP'   	# lsockT:       Display only open TCP sockets
+alias ip0='ipconfig getpacket en0'                  	# ip0:          Get info on connections for en0
+alias ip1='ipconfig getpacket en1'                  	# ip1:          Get info on connections for en1
+alias openPorts='sudo lsof -i | grep LISTEN'        	# openPorts:    All listening connections
 alias flushdns='dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say flushed'
+alias websiteget='wget --random-wait -r -p -e robots=off -U mozilla'
+getlocation() { lynx -dump http://www.ip-adress.com/ip_tracer/?QRY=$1|grep address|egrep 'city|state|country'|awk '{print $3,$4,$5,$6,$7,$8}'|sed 's\ip address flag \\'|sed 's\My\\';}
 
 ###########################
 #SYSTEM
@@ -31,6 +46,8 @@ alias freq='cut -f1 -d" " ~/.bash_history | sort | uniq -c | sort -nr | head -n 
 alias topc='top -o cpu'
 alias topm='top -o mem'
 alias check='npm outdated -g --depth=0'						#NPM help
+alias genpass="strings /dev/urandom | grep -o '[[:alnum:]]' | head -n 30 | tr -d '\n'; echo"
+alias grep='grep --color=auto'
 
 ###########################
 #Fun
@@ -40,3 +57,4 @@ alias matrix='LC_ALL=C tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS co
 alias binary='echo -e "1"; while $t; do for i in `seq 1 30`;do r="$[($RANDOM % 2)]";h="$[($RANDOM % 4)]";if [ $h -eq 1 ]; then v="0 $r";else v="1 $r";fi;v2="$v2 $v";done;echo -e $v2;v2="";done;'
 alias pic='asciiview'
 alias time='timedatectl'
+alias sodo='cat /dev/urandom | hexdump -C | grep "ca fe"'
