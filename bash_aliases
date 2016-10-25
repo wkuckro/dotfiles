@@ -42,12 +42,13 @@ getlocation() { lynx -dump http://www.ip-adress.com/ip_tracer/?QRY=$1|grep addre
 ###########################
 alias update='sudo apt-get update && sudo apt-get upgrade'  # Linux ONLY update on one command
 alias about='uname -amnprsv'                                # Define os name, version, and professor type
-alias freq='cut -f1 -d" " ~/.bash_history | sort | uniq -c | sort -nr | head -n 30'							# Show commands used frequently
+alias freq='cut -f1 -d" " ~/.bash_history | sort | uniq -c | sort -nr | head -n 20'							# Show commands used frequently
 alias topc='top -o cpu'
 alias topm='top -o mem'
 alias check='npm outdated -g --depth=0'						#NPM help
-alias genpass="strings /dev/urandom | grep -o '[[:alnum:]]' | head -n 30 | tr -d '\n'; echo"
+alias genpass='</dev/urandom tr -dc "!@#$%^&*()_A-Z-a-z-0-9" | head -c30; echo ""'
 alias grep='grep --color=auto'
+alias reload='source ~/.bash_profile && source ~/.bash_aliases'
 
 ###########################
 #Fun
