@@ -5,14 +5,14 @@
 ###########################
 ### Get os name via uname ###
 _myos="$(uname)"
- 
+
 ### add alias as per os using $_myos ###
 case $_myos in
-   Darwin) 
-	alias ls='ls -GFh'
+   Darwin)
+	alias lsa='ls -GFha'
 	;;
-   Linux) 
-	alias ls='ls --color=auto' 
+   Linux)
+	alias ls='ls --color=auto'
 	alias lsa='ls --color=auto -a'
 	;;
    *) ;;

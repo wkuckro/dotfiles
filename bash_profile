@@ -8,6 +8,8 @@ export PATH=/usr/local/sbin:$PATH
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+export GREP_OPTIONS='--color=always'
+export GREP_COLOR='1;35;40'
 
 # Added by install_latest_perl_osx.pl
 ####This is causing some weird bash login behavior
@@ -18,6 +20,7 @@ export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$
 ###########################
 #NVM help
 export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 #RVM help
