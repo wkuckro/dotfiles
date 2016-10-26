@@ -10,3 +10,7 @@ fi
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
+# Added to handle swift in Linux
+export PATH=$HOME/bin:$PATH
+
