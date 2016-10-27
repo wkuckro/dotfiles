@@ -38,6 +38,7 @@ brew install john
 brew install knock
 brew install netpbm
 brew install nmap
+brew install ngrep
 brew install pngcheck
 brew install socat
 brew install sqlmap
