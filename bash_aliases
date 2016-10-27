@@ -51,6 +51,11 @@ alias grep='grep --color=auto'
 alias reload='source ~/.bash_profile && source ~/.bash_aliases'
 
 ###########################
+#Git
+###########################
+alias g=git
+
+###########################
 #Fun
 ###########################
 alias starwars='telnet towel.blinkenlights.nl'
