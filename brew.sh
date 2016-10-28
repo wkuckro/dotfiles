@@ -53,6 +53,7 @@ brew install dark-mode
 brew install git
 brew install git-lfs
 brew install lynx
+brew install mas
 brew install mysql
 brew install nvm
 brew install openssl
