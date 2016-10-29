@@ -46,7 +46,7 @@ alias freq='cut -f1 -d" " ~/.bash_history | sort | uniq -c | sort -nr | head -n 
 alias topc='top -o cpu'
 alias topm='top -o mem'
 alias check='npm outdated -g --depth=0'						#NPM help
-alias genpass='</dev/urandom tr -dc "!@#$%^&*()_A-Z-a-z-0-9" | head -c30; echo ""'
+alias genpass='</dev/urandom LC_CTYPE=C tr -dc "!@#$%^&*()_A-Z-a-z-0-9" | head -c30; echo ""'
 alias grep='grep --color=auto'
 alias reload='source ~/.bash_profile && source ~/.bash_aliases'
 
