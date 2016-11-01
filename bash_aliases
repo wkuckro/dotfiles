@@ -40,7 +40,15 @@ getlocation() { lynx -dump http://www.ip-adress.com/ip_tracer/?QRY=$1|grep addre
 ###########################
 #SYSTEM
 ###########################
-alias update='sudo apt-get update && sudo apt-get upgrade'  # Linux ONLY update on one command
+case $_myos in
+    Darwin)
+	 alias update='softwareupdate -i -a && mas upgrade'    #Mac software updates
+	 ;;
+	Linux)
+	 alias update='sudo apt-get update && sudo apt-get upgrade'  # Linux ONLY update on one command
+	 ;;
+    *) ;;
+esac	 
 alias about='uname -amnprsv'                                # Define os name, version, and professor type
 alias freq='cut -f1 -d" " ~/.bash_history | sort | uniq -c | sort -nr | head -n 20'							# Show commands used frequently
 alias topc='top -o cpu'
@@ -49,7 +57,6 @@ alias check='npm outdated -g --depth=0'						#NPM help
 alias genpass='</dev/urandom LC_CTYPE=C tr -dc "!@#$%^&*()_A-Z-a-z-0-9" | head -c30; echo ""'
 alias grep='grep --color=auto'
 alias reload='source ~/.bash_profile && source ~/.bash_aliases'
-#alias update='softwareupdate -i -a && mas upgrade'    #Mac software updates
 
 ###########################
 #Fun
