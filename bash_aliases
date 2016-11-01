@@ -49,7 +49,7 @@ alias check='npm outdated -g --depth=0'						#NPM help
 alias genpass='</dev/urandom LC_CTYPE=C tr -dc "!@#$%^&*()_A-Z-a-z-0-9" | head -c30; echo ""'
 alias grep='grep --color=auto'
 alias reload='source ~/.bash_profile && source ~/.bash_aliases'
-#alias update='softwareupdate -i -a'    #Mac software update 
+#alias update='softwareupdate -i -a && mas upgrade'    #Mac software updates
 
 ###########################
 #Fun
