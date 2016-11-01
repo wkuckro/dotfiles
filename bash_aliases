@@ -62,6 +62,11 @@ alias reload='source ~/.bash_profile && source ~/.bash_aliases'
 #Git
 ###########################
 alias g=git
+alias gcm='git commit -m'
+alias gs='git status'
+alias gb='git branch'
+alias gco='git checkout'
+alias gbpurge='git fetch --all -p; git branch -vv | grep ": gone]" | awk "{ print $1 }" | xargs -n 1 git branch -d'
 
 ###########################
 #Fun
