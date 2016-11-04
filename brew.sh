@@ -52,7 +52,9 @@ brew install cmake
 brew install dark-mode
 brew install git
 brew install git-lfs
+brew install jq
 brew install lynx
+brew install htop
 brew install mas
 brew install mysql
 brew install nvm
