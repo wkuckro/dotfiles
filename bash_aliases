@@ -43,10 +43,10 @@ getlocation() { lynx -dump http://www.ip-adress.com/ip_tracer/?QRY=$1|grep addre
 ###########################
 case $_myos in
     Darwin)
-	 alias update='softwareupdate -i -a && mas upgrade'    #Mac software updates
+	 alias update='softwareupdate -i -a && mas upgrade && brew update && brew upgrade'    #Mac software updates
 	 ;;
 	Linux)
-	 alias update='sudo apt-get update && sudo apt-get upgrade'  # Linux ONLY update on one command
+	 alias update='sudo apt-get update && sudo apt-get upgrade && brew update && brew upgrade'  # Linux ONLY update on one command
 	 ;;
     *) ;;
 esac	 
@@ -62,7 +62,7 @@ alias reload='source ~/.bash_profile && source ~/.bash_aliases'
 ###########################
 #Git
 ###########################
-alias g=git
+alias g='git'
 alias gcm='git commit -m'
 alias gs='git status'
 alias gb='git branch'
