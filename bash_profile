@@ -17,7 +17,7 @@ case $_myos in
 	;;
    *) ;;
 esac
-
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # Added by install_latest_perl_osx.pl
 ####This is causing some weird bash login behavior
 #[ -r /Users/alpha/.bashrc ] && source /Users/alpha/.bashrc
