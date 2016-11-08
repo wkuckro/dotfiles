@@ -46,7 +46,7 @@ case $_myos in
 	 alias update='softwareupdate -i -a && mas upgrade && brew update && brew upgrade'    #Mac software updates
 	 ;;
 	Linux)
-	 alias update='sudo apt-get update && sudo apt-get upgrade && brew update && brew upgrade'  # Linux ONLY update on one command
+	 alias update='sudo apt-get update && sudo apt-get dist-upgrade && brew update && brew upgrade'  # Linux ONLY update on one command
 	 ;;
     *) ;;
 esac	 
