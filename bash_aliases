@@ -24,7 +24,7 @@ alias mount='mount |column -t'                      # mount:        Make mount H
 ###########################
 #NETWORKING
 ###########################
-alias ip='curl ifconfig.me && curl ifconfig.me/host'	# ipconfig:     Show public-facing ip
+alias ip='curl ifconfig.me/all'	# ipconfig:     Show public-facing ip
 alias netCons='lsof -i'                             	# netCons:      Show all open TCP/IP sockets
 alias flushDNS='dscacheutil -flushcache'            	# flushDNS:     Flush out the DNS Cache
 alias lsock='sudo /usr/sbin/lsof -i -P'             	# lsock:        Display open sockets
