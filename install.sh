@@ -35,3 +35,5 @@ else if [ "$(uname)" == "Linux" ];then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
 PATH="$HOME/.linuxbrew/bin:$PATH"
 fi
+
+source ~/.bash_profile && source ~/.bash_aliases && source ~/.functions
