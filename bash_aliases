@@ -22,6 +22,26 @@ alias du='du -ch'                                   # du            Define files
 alias mount='mount |column -t'                      # mount:        Make mount Human-readable
 
 ###########################
+#FUN
+###########################
+alias starwars='telnet towel.blinkenlights.nl'
+alias matrix='LC_ALL=C tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR="1;32" grep --color "[^ ]"'
+alias binary='echo -e "1"; while $t; do for i in `seq 1 30`;do r="$[($RANDOM % 2)]";h="$[($RANDOM % 4)]";if [ $h -eq 1 ]; then v="0 $r";else v="1 $r";fi;v2="$v2 $v";done;echo -e $v2;v2="";done;'
+alias pic='asciiview'
+alias time='timedatectl'
+alias sodo='cat /dev/urandom | hexdump -C | grep "ca fe"'
+
+###########################
+#GIT
+###########################
+alias g='git'
+alias gcm='git commit -m'
+alias gs='git status'
+alias gb='git branch'
+alias gco='git checkout'
+alias gbpurge='git fetch --all -p; git branch -vv | grep ": gone]" | awk "{ print $1 }" | xargs -n 1 git branch -d'
+
+###########################
 #NETWORKING
 ###########################
 alias ip='curl ifconfig.me/all'	# ipconfig:     Show public-facing ip
@@ -60,21 +80,6 @@ alias grep='grep --color=auto'
 alias reload='source ~/.bash_profile && source ~/.bash_aliases'
 
 ###########################
-#Git
+#TOOLS
 ###########################
-alias g='git'
-alias gcm='git commit -m'
-alias gs='git status'
-alias gb='git branch'
-alias gco='git checkout'
-alias gbpurge='git fetch --all -p; git branch -vv | grep ": gone]" | awk "{ print $1 }" | xargs -n 1 git branch -d'
-
-###########################
-#Fun
-###########################
-alias starwars='telnet towel.blinkenlights.nl'
-alias matrix='LC_ALL=C tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR="1;32" grep --color "[^ ]"'
-alias binary='echo -e "1"; while $t; do for i in `seq 1 30`;do r="$[($RANDOM % 2)]";h="$[($RANDOM % 4)]";if [ $h -eq 1 ]; then v="0 $r";else v="1 $r";fi;v2="$v2 $v";done;echo -e $v2;v2="";done;'
-alias pic='asciiview'
-alias time='timedatectl'
-alias sodo='cat /dev/urandom | hexdump -C | grep "ca fe"'
+alias colorpicker="osascript -e 'tell application "Finder"' -e 'activate' -e 'choose color' -e ' end tell'"
