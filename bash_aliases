@@ -63,13 +63,13 @@ getlocation() { lynx -dump http://www.ip-adress.com/ip_tracer/?QRY=$1|grep addre
 ###########################
 case $_myos in
     Darwin)
-	 alias update='softwareupdate -i -a && mas upgrade && brew update && brew upgrade'    #Mac software updates
+	 alias update='softwareupdate -i -a && mas upgrade && brew update && brew upgrade && brew cleanup --prune=30'    #Mac software updates
 	 ;;
 	Linux)
-	 alias update='sudo apt-get update && sudo apt-get dist-upgrade && brew update && brew upgrade'  # Linux ONLY update on one command
+	 alias update='sudo apt-get update && sudo apt-get dist-upgrade && brew update && brew upgrade && brew cleanup --prune=30'  # Linux ONLY update on one command
 	 ;;
     *) ;;
-esac	 
+esac
 alias about='uname -amnprsv'                                # Define os name, version, and professor type
 alias freq='cut -f1 -d" " ~/.bash_history | sort | uniq -c | sort -nr | head -n 20'							# Show commands used frequently
 alias topc='top -o cpu'
@@ -82,4 +82,4 @@ alias reload='source ~/.bash_profile && source ~/.bash_aliases'
 ###########################
 #TOOLS
 ###########################
-alias colorpicker="osascript -e 'tell application "Finder"' -e 'activate' -e 'choose color' -e ' end tell'"
+alias colorpicker="osascript -e 'tell application Finder' -e 'activate' -e 'choose color' -e ' end tell'"
