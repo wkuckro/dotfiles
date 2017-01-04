@@ -4,30 +4,30 @@
 
 ## Installation
 
-1. Start in the directory you'd like to be _above_ where these files live. This will install a folder called `dotfiles`, with the subsequent files and folders below it. So, if you want to install this in your user directory /User/dotfiles, you can stay where you are in a default prompt.
+1.Start in the directory you'd like to be _above_ where these files live. This will install a folder called `dotfiles`, with the subsequent files and folders below it. So, if you want to install this in your user directory /User/dotfiles, you can stay where you are in a default prompt.
 
 ```bash
 git clone https://github.com/wkuckro/dotfiles.git && cd ./dotfiles
 ```
 
-2. Run the script to make links and back up new existing files.
+2.Run the script to make links and back up new existing files.
 
 ```bash
 chmod +x makesymlinks.sh && ./makesymlinks.sh
 ```
 
-3. Run the install script to set up github and get first steps done
+3.Run the install script to set up github and get first steps done
 ```bash
 chmod +x install.sh && ./install.sh
 ```
 
-4. Run the brew installation to install it and common brew items.
+4.Run the brew installation to install it and common brew items.
 
 ```bash
 chmod +x brew.sh && ./brew.sh
 ```
 
-5. Run the macOS install file to update preferences on macOS
+5.Run the macOS install file to update preferences on macOS
 
 ```bash
 chmod +x osx.sh && ./osx.sh
