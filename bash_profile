@@ -2,7 +2,7 @@
 ###########################
 #System
 ###########################
-
+source ~/.bash_aliases
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export CLICOLOR=1
@@ -18,7 +18,6 @@ case $_myos in
    *) ;;
 esac
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-# Added by install_latest_perl_osx.pl
 ####This is causing some weird bash login behavior
 #[ -r /Users/alpha/.bashrc ] && source /Users/alpha/.bashrc
 
