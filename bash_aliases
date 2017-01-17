@@ -6,7 +6,7 @@
 ### Get os name via uname ###
 _myos="$(uname)"
 
-### add alias as per os using $_myos ###
+# add alias as per os using $_myos #
 case $_myos in
    Darwin)
 	alias lsa='ls -GFha'
