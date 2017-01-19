@@ -3,6 +3,7 @@
 #System
 ###########################
 source ~/.bash_aliases
+source ~/.functions
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export CLICOLOR=1
