@@ -8,3 +8,7 @@
 function mkd() {
     mkdir -p "$@" && cd "$@"
 }
+
+? () {
+  echo "$*" | bc -l;
+}
