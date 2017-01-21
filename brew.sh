@@ -96,6 +96,7 @@ brew cask install netspot
 brew cask install numi
 brew cask install parallels-desktop
 brew cask install postman
+brew cask install qlstephen
 brew cask install slack
 brew cask install teamviewer
 brew cask install torbrowser
