@@ -50,9 +50,11 @@ brew install xz
 brew install ack
 brew install cmake
 brew install dark-mode
+brew install ffmpeg
 brew install git
 brew install git-lfs
 brew install jq
+brew install libav
 brew install lynx
 brew install htop
 brew install mas
@@ -68,6 +70,7 @@ brew install testssl
 brew install tree
 brew install vbindiff
 brew install webkit2png
+brew install youtube-dl
 
 # Check and see if it's a Mac, then install the cask and apps below
 if [ "$(uname)" == "Darwin" ]; then
