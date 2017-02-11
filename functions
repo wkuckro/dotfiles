@@ -9,6 +9,7 @@ function mkd() {
     mkdir -p "$@" && cd "$@"
 }
 
+# Do Math Equations
 ? () {
   echo "$*" | bc -l;
 }

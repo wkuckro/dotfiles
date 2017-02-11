@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
+### Install Homebrew tools
 
-# Install command-line tools using Homebrew.
+
+# Ask for the administrator password upfront
+echo "Enter you password now once instead of many times later"
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Update Homebrew and any existing formulae
 brew update
@@ -72,6 +79,11 @@ brew install vbindiff
 brew install webkit2png
 brew install youtube-dl
 
+# Install help from the above
+git lfs install --system
+pip3 install --upgrade pip setuptools wheel
+
+
 # Check and see if it's a Mac, then install the cask and apps below
 if [ "$(uname)" == "Darwin" ]; then
 # Install Caskroom
@@ -84,6 +96,7 @@ brew cask install atom
 brew cask install audio-hijack
 brew cask install caffine
 brew cask install carbon-copy-cloner
+brew cask install clipmenu
 brew cask install daisydisk
 brew cask install dropbox
 brew cask install firefox
@@ -104,6 +117,7 @@ brew cask install slack
 brew cask install teamviewer
 brew cask install torbrowser
 brew cask install transmit
+brew cask install tunnelblick
 brew cask install virtualbox
 brew cask install vlc
 fi

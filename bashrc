@@ -14,3 +14,5 @@ fi
 # Added to handle swift in Linux
 export PATH=$HOME/bin:$PATH
 
+export NVM_DIR="/Users/wkuckro/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

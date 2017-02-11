@@ -5,8 +5,6 @@
 ###########################
 ### Get os name via uname ###
 _myos="$(uname)"
-
-# add alias as per os using $_myos #
 case $_myos in
    Darwin)
 	alias lsa='ls -GFha'
@@ -17,6 +15,7 @@ case $_myos in
 	;;
    *) ;;
 esac
+
 alias df='df -H'                                    # df            Define files in human-readble
 alias du='du -ch'                                   # du            Define files in human-readble
 alias mount='mount |column -t'                      # mount:        Make mount Human-readable
