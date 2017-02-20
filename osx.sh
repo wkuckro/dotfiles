@@ -57,6 +57,9 @@ defaults write com.apple.dock autohide -bool true
 echo "Make Dock icons of hidden applications translucent"
 defaults write com.apple.dock showhidden -bool true
 
+echo "Turn on CUPS"
+cupsctl WebInterface=yes
+
 ##########################
 ## Finder Settings
 ##########################
