@@ -1,6 +1,6 @@
 # dotfiles
 
-####Keeping everything intact across all machines
+#### Keeping everything intact across all machines
 
 ## Installation
 
