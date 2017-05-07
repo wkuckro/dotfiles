@@ -19,6 +19,7 @@ esac
 alias df='df -H'                                    # df            Define files in human-readble
 alias du='du -ch'                                   # du            Define files in human-readble
 alias mount='mount |column -t'                      # mount:        Make mount Human-readable
+alias path='echo -e ${PATH//:/\\n}'
 
 ###########################
 #FUN
@@ -43,8 +44,10 @@ alias gbpurge='git fetch --all -p; git branch -vv | grep ": gone]" | awk "{ prin
 ###########################
 #NETWORKING
 ###########################
-alias ip='curl ifconfig.me/all'	# ipconfig:     Show public-facing ip
+alias ip='dig +short myip.opendns.com @resolver1.opendns.com'	# ipconfig:     Show public-facing ip
+alias localip='ipconfig getifaddr en0'                # localip get local ip address
 alias netCons='lsof -i'                             	# netCons:      Show all open TCP/IP sockets
+alias ifactive='ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'' # ifactive Show open interfaces
 alias flushDNS='dscacheutil -flushcache'            	# flushDNS:     Flush out the DNS Cache
 alias lsock='sudo /usr/sbin/lsof -i -P'             	# lsock:        Display open sockets
 alias lsockU='sudo /usr/sbin/lsof -nP | grep UDP'   	# lsockU:       Display only open UDP sockets
