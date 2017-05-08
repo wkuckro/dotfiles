@@ -43,3 +43,4 @@ export PATH="/home/alpha/.linuxbrew/bin:$PATH"
 export PATH="/home/alpha/.linuxbrew/sbin:$PATH"
 export XDG_DATA_DIRS="/home/alpha/.linuxbrew/share:$XDG_DATA_DIRS"
 fi
+eval $(/usr/libexec/path_helper -s)
