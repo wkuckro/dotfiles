@@ -20,11 +20,14 @@ case $_myos in
 esac
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-# Append to the Bash history file, rather than overwriting it
+#Append to the Bash history file, rather than overwriting it
 shopt -s histappend;
 
 ####This is causing some weird bash login behavior
 #[ -r /Users/alpha/.bashrc ] && source /Users/alpha/.bashrc
+
+#Solving for DO login
+ssh-add ~/.ssh/algo > /dev/null 2>&1
 
 ###########################
 #App helpers
