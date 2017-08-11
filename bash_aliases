@@ -86,4 +86,4 @@ alias reload='source ~/.bash_profile && source ~/.bash_aliases'
 ###########################
 alias colorpicker="osascript -e 'tell application Finder' -e 'activate' -e 'choose color' -e ' end tell'"
 alias pretty='python3 -m json.tool'
-alias cd='cd ..'
+alias cd='cd'
