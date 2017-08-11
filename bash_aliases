@@ -58,7 +58,7 @@ alias openPorts='sudo lsof -i | grep LISTEN'        	# openPorts:    All listeni
 alias flushdns='dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say flushed'
 alias websiteget='wget --random-wait -r -p -e robots=off -U mozilla'
 alias speedtest='(date +"%Y-%m-%d_%H:%M:%S" && speedtest-cli && date +"%Y-%m-%d_%H:%M:%S") | tee -a ~/speedresults.txt'
-getlocation() { lynx -dump http://www.ip-adress.com/ip_tracer/?QRY=$1|grep address|egrep 'city|state|postcode'|awk '{print $3,$4,$5,$6,$7,$8}';}
+getlocation() { lynx -dump https://www.ip-adress.com/what-is-my-ip-address|grep address|egrep 'city|state|postcode'|awk '{print $3,$4,$5,$6,$7,$8}';}
 
 ###########################
 #SYSTEM
@@ -86,3 +86,4 @@ alias reload='source ~/.bash_profile && source ~/.bash_aliases'
 ###########################
 alias colorpicker="osascript -e 'tell application Finder' -e 'activate' -e 'choose color' -e ' end tell'"
 alias pretty='python3 -m json.tool'
+alias cd='cd ..'
