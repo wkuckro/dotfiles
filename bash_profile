@@ -22,6 +22,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 #Append to the Bash history file, rather than overwriting it
 shopt -s histappend;
+export HISTCONTROL=erasedups
 
 ####This is causing some weird bash login behavior
 #[ -r /Users/alpha/.bashrc ] && source /Users/alpha/.bashrc
