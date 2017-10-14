@@ -30,6 +30,7 @@ alias binary='echo -e "1"; while $t; do for i in `seq 1 30`;do r="$[($RANDOM % 2
 alias pic='asciiview'
 alias time='timedatectl'
 alias sodo='cat /dev/urandom | hexdump -C | grep "ca fe"'
+alias dl='youtube-dl -f m4a'
 
 ###########################
 #GIT
