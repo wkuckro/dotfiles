@@ -33,17 +33,17 @@ ssh-add ~/.ssh/algo > /dev/null 2>&1
 #App helpers
 ###########################
 #NVM help
-export NVM_DIR="$HOME/.nvm"
-. "$(brew --prefix nvm)/nvm.sh"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+#export NVM_DIR="$HOME/.nvm"
+#. "$(brew --prefix nvm)/nvm.sh"
+#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 #RVM help
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Check for Ubuntu, fix for it
-if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-export PATH="/home/alpha/.linuxbrew/bin:$PATH"
-export PATH="/home/alpha/.linuxbrew/sbin:$PATH"
-export XDG_DATA_DIRS="/home/alpha/.linuxbrew/share:$XDG_DATA_DIRS"
-fi
-eval $(/usr/libexec/path_helper -s)
+#if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+#export PATH="/home/alpha/.linuxbrew/bin:$PATH"
+#export PATH="/home/alpha/.linuxbrew/sbin:$PATH"
+#export XDG_DATA_DIRS="/home/alpha/.linuxbrew/share:$XDG_DATA_DIRS"
+#fi
+#eval $(/usr/libexec/path_helper -s)
