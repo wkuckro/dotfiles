@@ -19,3 +19,6 @@ export NVM_DIR="/Users/wkuckro/.nvm"
 
 # Addin handing for thefuck
 eval $(thefuck --alias fuck)
+
+#Handle history better
+export HISTTIMEFORMAT='%F %T '
