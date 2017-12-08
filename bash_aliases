@@ -58,7 +58,7 @@ alias ip1='ipconfig getpacket en1'                  	# ip1:          Get info on
 alias openPorts='sudo lsof -i | grep LISTEN'        	# openPorts:    All listening connections
 alias flushdns='dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say flushed'
 alias websiteget='wget --random-wait -r -p -e robots=off -U mozilla'
-alias speedtest='(date +"%Y-%m-%d_%H:%M:%S" && speedtest-cli && date +"%Y-%m-%d_%H:%M:%S") | tee -a ~/speedresults.txt'
+alias speed='(date +"%Y-%m-%d_%H:%M:%S" && speedtest-cli && date +"%Y-%m-%d_%H:%M:%S") | tee -a ~/speedresults.txt'
 getlocation() { lynx -dump https://www.ip-adress.com/what-is-my-ip-address|grep address|egrep 'city|state|postcode'|awk '{print $3,$4,$5,$6,$7,$8}';}
 
 ###########################

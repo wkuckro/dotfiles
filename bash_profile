@@ -40,6 +40,7 @@ ssh-add ~/.ssh/algo > /dev/null 2>&1
 
 #RVM help
 #[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+source ~/.profile
 
 # Check for Ubuntu, fix for it
 #if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
