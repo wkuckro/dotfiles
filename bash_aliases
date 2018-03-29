@@ -81,6 +81,8 @@ alias check='npm outdated -g --depth=0'						#NPM help
 alias genpass='</dev/urandom LC_CTYPE=C tr -dc "!@#$%^&*()_A-Z-a-z-0-9" | head -c30; echo ""'
 alias grep='grep --color=auto'
 alias reload='source ~/.bash_profile && source ~/.bash_aliases'
+alias resetopen='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user
+ && killall Finder'
 
 ###########################
 #TOOLS
