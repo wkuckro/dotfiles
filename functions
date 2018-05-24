@@ -13,7 +13,3 @@ function mkd() {
 ? () {
   echo "$*" | bc -l;
 }
-
-sid () {
-curl -X GET http://sessions-api.luc1d.com/api/v2/sessionsbysid/$@ > files.json && open -a "Atom" sidfiles.json && sort-json sidfiles.json
-}
