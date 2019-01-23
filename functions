@@ -13,3 +13,12 @@ function mkd() {
 ? () {
   echo "$*" | bc -l;
 }
+
+# sessionsapi lookups
+sid () {
+curl -X GET http://sessions-api.luc1d.com/api/v2/sessionsbysid/$@ > ~/Desktop/sid.json && open -a "Atom" ~/Desktop/sid.json && sort-json ~/Desktop/sid.json
+}
+
+rsid (){
+curl -X GET http://sessions-api.luc1d.com/api/v2/respondentsidsurveys/$@ > ~/Desktop/rsid.json && open -a "Atom" ~/Desktop/rsid.json && sort-json ~/Desktop/rsid.json
+}
