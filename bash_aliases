@@ -24,7 +24,7 @@ alias path='echo -e ${PATH//:/\\n}'
 ###########################
 #FUN
 ###########################
-alias starwars='telnet towel.blinkenlights.nl'
+alias starwars='nc towel.blinkenlights.nl 23'
 alias matrix='LC_ALL=C tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR="1;32" grep --color "[^ ]"'
 alias binary='echo -e "1"; while $t; do for i in `seq 1 30`;do r="$[($RANDOM % 2)]";h="$[($RANDOM % 4)]";if [ $h -eq 1 ]; then v="0 $r";else v="1 $r";fi;v2="$v2 $v";done;echo -e $v2;v2="";done;'
 alias pic='asciiview'
