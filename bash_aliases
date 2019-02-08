@@ -68,10 +68,10 @@ getlocation() { lynx -dump https://www.ip-adress.com/what-is-my-ip-address|grep 
 ###########################
 case $_myos in
     Darwin)
-	 alias update='softwareupdate -i -a && mas upgrade && brew update && brew upgrade && brew cask update && brew cleanup --prune=30'    #Mac software updates
+	 alias update='softwareupdate -i -a && mas upgrade && brew update && brew upgrade && brew cask upgrade && brew cleanup --prune=30'    #Mac software updates
 	 ;;
 	Linux)
-	 alias update='sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremove && brew update && brew upgrade && brew cask update && brew cleanup --prune=30'  # Linux ONLY update on one command
+	 alias update='sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoremove && brew upgrade && brew upgrade && brew cask update && brew cleanup --prune=30'  # Linux ONLY update on one command
 	 ;;
     *) ;;
 esac
