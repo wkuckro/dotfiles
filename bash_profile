@@ -53,3 +53,5 @@ source ~/.profile
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
 export PATH
+export GOPATH=$HOME/go
+export GOPATH=$GOPATH/bin
