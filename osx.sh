@@ -27,11 +27,11 @@ sudo nvram SystemAudioVolume=" "
 echo "Automatically quit printer app once the print jobs complete"
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
-echo "Check for software updates daily, not just once per week"
-defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+#echo "Check for software updates daily, not just once per week"
+#defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
-echo "Turn off keyboard illumination when computer is not used for 5 minutes"
-defaults write com.apple.BezelServices kDimTime -int 300
+#echo "Turn off keyboard illumination when computer is not used for 5 minutes"
+#defaults write com.apple.BezelServices kDimTime -int 300
 
 echo "Setting system crashes to Notifications Pane"
 defaults write com.apple.CrashReporter UseUNC 1
@@ -94,8 +94,8 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 echo "Use column view in all Finder windows by default"
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
-#echo "Order by Kind"
-#/usr/libexec/PlistBuddy -c "Set :StandardViewOptions:ColumnViewOptions:ArrangeBy dnam" ~/Library/Preferences/com.apple.finder.plist
+echo "Order by Kind"
+/usr/libexec/PlistBuddy -c "Set :StandardViewOptions:ColumnViewOptions:ArrangeBy dnam" ~/Library/Preferences/com.apple.finder.plist
 
 ##########################
 ## Safari Settings
@@ -111,9 +111,6 @@ echo "Enabling the Develop menu and the Web Inspector in Safari"
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
-
-echo "Make Safari’s search banners default to Contains instead of Starts With"
-defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
 
 echo "Show the full URL in the address bar (note: this still hides the scheme)"
 defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
@@ -161,28 +158,7 @@ echo "Expand the print dialog by default"
 defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
 defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool true
 
-##########################
-## Transmission Settings
-##########################
-
-echo "Trash original torrent files"
-defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
-
-echo "Hide the donate message"
-defaults write org.m0k.transmission WarningDonate -bool false
-echo "Hide the legal disclaimer"
-defaults write org.m0k.transmission WarningLegal -bool false
-
-echo "IP block list."
-# Source: https://giuliomac.wordpress.com/2014/02/19/best-blocklist-for-transmission/
-defaults write org.m0k.transmission BlocklistNew -bool true
-defaults write org.m0k.transmission BlocklistURL -string "http://john.bitsurge.net/public/biglist.p2p.gz"
-defaults write org.m0k.transmission BlocklistAutoUpdate -bool true
-
-
 echo "Kill affected applications"
-for app in "Address Book" "Calendar" "Contacts" "Dock" "Finder" "Google Chrome" \
-  "Google Chrome Canary" "Mail" "Messages" "Safari" "SystemUIServer" "Terminal" \
-	"Transmission"; do
+for app in "Address Book" "Calendar" "Contacts" "Dock" "Finder" "Google Chrome" "Google Chrome Canary" "Mail" "Messages" "Safari" "SystemUIServer" "Terminal"; do
 	killall "${app}" &> /dev/null
 done
