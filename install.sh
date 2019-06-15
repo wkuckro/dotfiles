@@ -20,20 +20,4 @@ else if [ "$(uname)" == "Linux" ];then
 PATH="$HOME/.linuxbrew/bin:$PATH"
 fi
 
-#############################
-#Install Node and components
-#############################
-
-# Install Node Version Manager
-echo -e "\n\nInstalling Node (from nvm)"
-echo "=============================="
-
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | bash
-
-source $(brew --prefix nvm)/nvm.sh
-
-# Install Node after NVM complete
-nvm install stable
-nvm alias default stable
-
 source ~/.bash_profile && source ~/.bash_aliases && source ~/.functions
