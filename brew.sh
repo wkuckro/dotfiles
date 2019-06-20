@@ -96,13 +96,14 @@ brew cask install airfoil
 brew cask install appcleaner
 brew cask install atom
 brew cask install audio-hijack
-brew cask install caffine
+brew cask install caffeine
 brew cask install carbon-copy-cloner
-brew cask install clipmenu
+#brew cask install clipmenu
 brew cask install daisydisk
 #brew cask install dropbox
 brew cask install firefox
 brew cask install fission
+brew cask install github
 brew cask install google-chrome
 brew cask install google-chrome-canary
 #brew cask install google-drive
@@ -112,7 +113,8 @@ brew cask install google-chrome-canary
 brew cask install istat-menus
 brew cask install iterm2
 #brew cask install netspot
-brew cask install numi
+#brew cask install numi
+brew cask install Opera
 #brew cask install parallels-desktop
 #brew cask install postman
 brew cask install qlstephen
