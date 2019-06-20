@@ -65,64 +65,65 @@ brew install libav
 brew install lynx
 brew install htop
 brew install mas
-brew install mysql
-brew install nvm
+#brew install mysql
+#brew install nvm
 brew install openssl
 #brew install pv
-brew install python3
-brew install ruby
-brew install speedtest_cli
-brew install ssh-copy-id
-brew install testssl
-brew install thefuck
-brew install tree
-brew install vbindiff
-brew install webkit2png
+#brew install python3
+#brew install ruby
+#brew install speedtest-cli
+#brew install ssh-copy-id
+#brew install testssl
+#brew install thefuck
+#brew install tree
+#brew install vbindiff
+#brew install webkit2png
 brew install youtube-dl
 
 # Install help from the above
-git lfs install --system
-pip3 install --upgrade pip setuptools wheel
+#git lfs install --system
+#pip3 install --upgrade pip setuptools wheel
 
 
 # Check and see if it's a Mac, then install the cask and apps below
 if [ "$(uname)" == "Darwin" ]; then
 # Install Caskroom
 brew tap caskroom/cask
+brew tap homebrew/cask-versions
 
 # Install Apps
-#brew cask install airfoil
-#brew cask install appcleaner
-#brew cask install atom
-#brew cask install audio-hijack
-#brew cask install caffine
-#brew cask install carbon-copy-cloner
-#brew cask install clipmenu
-#brew cask install daisydisk
+brew cask install airfoil
+brew cask install appcleaner
+brew cask install atom
+brew cask install audio-hijack
+brew cask install caffine
+brew cask install carbon-copy-cloner
+brew cask install clipmenu
+brew cask install daisydisk
 #brew cask install dropbox
-#brew cask install firefox
-#brew cask install fission
-#brew cask install google-chrome
+brew cask install firefox
+brew cask install fission
+brew cask install google-chrome
+brew cask install google-chrome-canary
 #brew cask install google-drive
 #brew cask install google-earth-pro
 #brew cask install helium
 #brew cask install icefloor
-#brew cask install istat-menus
-#brew cask install iterm2
+brew cask install istat-menus
+brew cask install iterm2
 #brew cask install netspot
-#brew cask install numi
+brew cask install numi
 #brew cask install parallels-desktop
 #brew cask install postman
-#brew cask install qlstephen
-#brew cask install slack
+brew cask install qlstephen
+brew cask install slack
 #brew cask install teamviewer
-#brew cask install torbrowser
-#brew cask install transmit
-#brew cask install tunnelblick
+brew cask install tor-browser
+brew cask install transmit
+brew cask install tunnelblick
 #brew cask install virtualbox
-#brew cask install vlc
-#fi
+brew cask install vlc
+fi
 
 # Remove outdated versions from the cellar.
-brew cask cleanup
 brew cleanup
