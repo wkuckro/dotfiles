@@ -60,6 +60,9 @@ defaults write com.apple.dock showhidden -bool true
 echo "Turn on CUPS"
 cupsctl WebInterface=yes
 
+#echo "Desktop movement hotkeys"
+#defaults write com.apple.symbolichotkeys
+
 ##########################
 ## Finder Settings
 ##########################
