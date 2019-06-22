@@ -96,6 +96,7 @@ brew cask install airfoil
 brew cask install appcleaner
 brew cask install atom
 brew cask install audio-hijack
+brew cask install brave-browser
 brew cask install caffeine
 brew cask install carbon-copy-cloner
 #brew cask install clipmenu
