@@ -71,7 +71,7 @@ brew install openssl
 #brew install pv
 #brew install python3
 #brew install ruby
-#brew install speedtest-cli
+brew install speedtest-cli
 #brew install ssh-copy-id
 #brew install testssl
 #brew install thefuck
